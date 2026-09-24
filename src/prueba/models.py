@@ -6,3 +6,6 @@ from django.db import models
 class Cliente(models.Model):
     nombre = models.CharField()
     apellido = models.CharField()
+
+    def __str__(self) -> str:
+        return f"{self.apellido.upper()}, {self.nombre.capitalize()}"
